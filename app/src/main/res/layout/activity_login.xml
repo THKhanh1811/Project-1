@@ -6,57 +6,61 @@
     android:layout_height="match_parent"
     android:background="#c31f3a"
     android:orientation="vertical"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
     tools:context="com.khanh.project.Login">
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/user"
+        android:id="@+id/txtuser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="79dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="20dp"
         android:text="Username"
         android:textColor="#ffffff"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <EditText
-        android:id="@+id/user"
-        android:layout_width="200dp"
+        android:id="@+id/edtuser"
+        android:layout_width="220dp"
         android:layout_height="35dp"
         android:layout_marginTop="4dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/border"
         android:ems="10"
+        android:paddingLeft="5dp"
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:singleLine="false"
         android:text="" />
 
     <TextView
-        android:id="@+id/pass"
+        android:id="@+id/txtpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="79dp"
+        android:layout_marginLeft="69dp"
         android:layout_marginTop="4dp"
         android:text="Password"
         android:textColor="#ffffff"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
     <EditText
-        android:id="@+id/pass"
-        android:layout_width="200dp"
+        android:id="@+id/edtpass"
+        android:layout_width="220dp"
         android:layout_height="35dp"
         android:layout_marginTop="4dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/border"
         android:ems="10"
+        android:paddingLeft="5dp"
         android:inputType="textPassword"
         android:selectAllOnFocus="false"
         android:singleLine="false"
@@ -67,20 +71,21 @@
         style="@android:style/Widget.CompoundButton.CheckBox"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
-        android:layout_marginLeft="74dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="8dp"
         android:buttonTint="#ffffff"
         android:text="Remember"
         android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/sign"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_gravity="center_horizontal"
         android:layout_height="35dp"
         android:background="@drawable/borderbutton"
         android:textAllCaps="false"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
+        android:textSize="14sp"
         android:textColor="#ffffff"
         android:text="Sign in" />
 
@@ -89,8 +94,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="Forgot Password ?"
+        android:textSize="14sp"
         android:textColor="#ffffff" />
 
     <TextView
@@ -99,6 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Create new account ?"
+        android:textSize="14sp"
         android:textColor="#ffffff" />
 
 

@@ -1,8 +1,11 @@
 package com.khanh.project;
 
 import android.graphics.Typeface;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -18,22 +21,29 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getSupportActionBar().hide();
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/AVANTN.ttf");
+        Window window = this.getWindow();
+
+// clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+// add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+// finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this,R.color.statusbar_color_change));
+
+        anhxa();
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Bambino Light.ttf");
         user.setTypeface(typeface);
-        Typeface typeface2 = Typeface.createFromAsset(getAssets(), "fonts/AVANTN.ttf");
-        pass.setTypeface(typeface2);
-        Typeface typeface3 = Typeface.createFromAsset(getAssets(), "fonts/AVANTN.ttf");
-        forgot.setTypeface(typeface3);
-        Typeface typeface4 = Typeface.createFromAsset(getAssets(), "fonts/AVANTN.ttf");
-        create.setTypeface(typeface4);
-        Typeface typeface5 = Typeface.createFromAsset(getAssets(), "fonts/AVANTN.ttf");
-        sign.setTypeface(typeface5);
-        Typeface typeface6 = Typeface.createFromAsset(getAssets(), "fonts/AVANTN.ttf");
-        check.setTypeface(typeface6);
+        pass.setTypeface(typeface);
+        forgot.setTypeface(typeface);
+        create.setTypeface(typeface);
+        sign.setTypeface(typeface);
+        check.setTypeface(typeface);
     }
     public void anhxa(){
-        user = (TextView)findViewById(R.id.user);
-        pass = (TextView)findViewById(R.id.pass);
+        user = (TextView)findViewById(R.id.txtuser);
+        pass = (TextView)findViewById(R.id.txtpass);
         forgot = (TextView)findViewById(R.id.forgot);
         create = (TextView)findViewById(R.id.create);
         sign = (Button)findViewById(R.id.sign);
